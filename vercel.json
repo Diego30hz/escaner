@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "Taller/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "Python 3.13.0" }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "Taller/wsgi.py"
+      }
+    ]
+  }
+  
